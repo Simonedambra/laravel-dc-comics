@@ -33,25 +33,28 @@
     </header>
 @endsection
 @section('main')
-    <div class="container-fluid img-jumbo-index-SD ">
-        <img class="w-100 object-fit-cover" src="https://images.thedirect.com/media/article_full/dc-dcu-new-characters.jpg"
-            alt="jumbo image">
+    <div class="container-fluid img-jumbo-index-SD p-0">
+        <div class="img-jum d-flex justify-content-center align-items-center">
+            <img class="w-25" src="https://upload.wikimedia.org/wikipedia/commons/3/3d/DC_Comics_logo.svg" alt="dc">
+        </div>
     </div>
-    <div class=" container-fluid d-flex flex-wrap justify-content-center">
+    <div class="SD-base">
+        <div class="SD-main container-fluid d-flex flex-wrap justify-content-center">
 
 
-        @foreach ($comics as $comic)
-            <div class="card-SD rounded-4 overflow-hidden">
-                <div class="img-card ">
-                    <img class="w-100 h-100 object-fit-cover " src="{{ $comic->thumb }}" alt="{{ $comic->title }}">
+            @foreach ($comics as $comic)
+                <div class="card-SD rounded-4 overflow-hidden">
+                    <div class="img-card">
+                        <img class="w-100 h-100 object-fit-cover " src="{{ $comic->thumb }}" alt="{{ $comic->title }}">
+                    </div>
+                    <h3 class=" m-3">{{ $comic->title }}</h3>
                 </div>
-                {{ $comic->title }}
-            </div>
-        @endforeach
+            @endforeach
+        </div>
     </div>
     </div>
 @endsection
 
 @section('footer')
-    <h1>footer</h1>
+    <div class="SD-footer"></div>
 @endsection
