@@ -7,8 +7,7 @@
 }
 .img-jumbo-index-SD{
     margin-top: 9.375rem;
-    
-   height: 50rem;
+   height: 43.75rem;
    width: 100%;
 }
 .img-jum{
@@ -49,15 +48,13 @@ ul{
 .SD-base{
 background-color: #232323;
 .SD-main{
+    
     background: rgb(18,18,18);
     background: linear-gradient(0deg, rgba(18,18,18,1) 0%, rgba(181,25,25,1) 50%, rgba(0,0,0,1) 100%);
     padding-top: 150px;
     padding-bottom: 150px;
-    transform: perspective(1500px) rotateX(20deg);    
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
-    transition: transform 1s ease 0s;
-   &:hover {
-      transform: perspective(3000px) rotateX(0deg);}
+   
+   
     .card-SD{
     margin: 20px;
     width: 400px;
@@ -72,4 +69,11 @@ background-color: #232323;
 }
 }
 }
-.SD-footer{}
+.SD-footer{
+    background-color: #232323;
+    width: 100%;
+    height: 28.125rem;
+     img{
+        width: 10%;
+     }
+}

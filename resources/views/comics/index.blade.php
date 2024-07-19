@@ -56,5 +56,9 @@
 @endsection
 
 @section('footer')
-    <div class="SD-footer"></div>
+    <div class="SD-footer d-flex justify-content-between align-items-center">
+        <div>description</div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3d/DC_Comics_logo.svg" alt="dc-footer">
+        <div>contatti</div>
+    </div>
 @endsection
