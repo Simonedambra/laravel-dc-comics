@@ -1,0 +1,46 @@
+.header-index-SD{
+    height: 9.375rem;
+    
+    background-color: hsl(0, 0%, 100%);
+}
+.img-jumbo-index-SD{
+   height: 37.5rem;
+   
+ background-color: aqua;
+}
+
+
+
+.bg-sd-card{
+    background-color: blue;
+}
+ul{
+    
+    li{
+        display: flex;
+        align-items: center;
+        list-style: none;
+        height: 150px;
+        
+        a{
+            text-decoration: none;
+            font-size: 20px;
+            color: #232323;
+            
+        }
+        
+    }
+}
+.border-SD-blue{
+    border-bottom: 10px solid rgb(1, 99, 255);
+}
+.card-SD{
+    margin: 20px;
+    width: 400px;
+    height: 450px;
+    background-color: rgb(1, 99, 255);
+}
+.img-card{
+    width: 100%;
+    height: 80%;
+}

@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Admin\Comicscontroller;
+use App\Http\Controllers\Guest\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -12,7 +14,6 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::get("/", [HomeController::class,"index"])->name("home");
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::resource('comics', Comicscontroller::class);
