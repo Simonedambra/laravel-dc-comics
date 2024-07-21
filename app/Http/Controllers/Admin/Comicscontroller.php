@@ -60,8 +60,13 @@ class Comicscontroller extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Comic $Comic)
+    //public function destroy(string $id)
     {
-        //
+        // $pasta = Pasta::findOrFail($id);
+
+        $Comic->delete();
+
+        return redirect()->route('comics.index');
     }
 }

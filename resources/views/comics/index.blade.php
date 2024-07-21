@@ -48,6 +48,12 @@
                         <img class="w-100 h-100 object-fit-cover " src="{{ $comic->thumb }}" alt="{{ $comic->title }}">
                     </div>
                     <h3 class=" m-3">{{ $comic->title }}</h3>
+                    <form action="{{ route('comics.destroy', $comic->id) }}" method="POST">
+                        @csrf
+                        @method('DELETE')
+                        <button class="SD-butt">delete</button>
+                    </form>
+
                 </div>
             @endforeach
         </div>
