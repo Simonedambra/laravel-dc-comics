@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreComicsRequest;
+use App\Http\Requests\UpdateComicsRequest;
 use App\Models\Comic;
 use Illuminate\Http\Request;
 
@@ -56,17 +57,19 @@ class Comicscontroller extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(comic $comic)
     {
-        //
+        return view("comics.edit", compact("comic"));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(UpdateComicsRequest $request, Comic $comic)
     {
-        //
+        $data = $request->validated();
+        $comic->update($data);
+        return redirect()->route('comics.show', $comic);
     }
 
     /**

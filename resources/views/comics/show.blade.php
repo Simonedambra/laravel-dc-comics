@@ -12,6 +12,7 @@
                 <h1 class=" m-3">{{ $comic->title }}</h1 class=>
                 <h3>{{ $comic->id }}</h3>
                 <h4>{{ $comic->description }}</h4>
+                <a href="{{ route('comics.edit', $comic) }}">Modifica fumetto</a>
             </div>
         </div>
     </div>
