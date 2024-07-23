@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\StoreComicsRequest;
 use App\Models\Comic;
 use Illuminate\Http\Request;
 
@@ -22,23 +23,34 @@ class Comicscontroller extends Controller
      */
     public function create()
     {
-        //
+        
+            return view('comics.create');
+            
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(StoreComicsRequest $request)
     {
-        //
+        $data = $request->validated();
+        
+        $comic = new Comic();
+        $comic->fill($data);
+        $comic->save();
+
+        return redirect()->route('comics.show', $comic);
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    
+
+    public function show(comic $comic)
     {
-        //
+        
+        return view("comics.show", compact("comic"));
     }
 
     /**
