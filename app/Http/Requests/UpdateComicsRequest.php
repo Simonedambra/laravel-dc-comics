@@ -22,8 +22,8 @@ class UpdateComicsRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'title'=>['required','string',''],
-            'description'=>['required','string',''],
+            'title'=>['required','string','min:3'],
+            'description'=>['required','string','max:512'],
         ];
     }
 }
